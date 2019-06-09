@@ -10,8 +10,10 @@ const resolvers = {
 			getRequest(URL_courses, ''),
 		courseByCode: (_, { code }) =>
 			generalRequest(`${URL_courses}/${code}`, 'GET'),
-		allStudents: (_) =>
-			getRequest(URL_students, ''),
+		allStudents: (_) =>{
+			console.log(URL_students)
+			getRequest(URL_students, '')
+		},
 		studentByCode: (_, { code }) =>
 			generalRequest(`${URL_students}/${code}`, 'GET'),
 	},
